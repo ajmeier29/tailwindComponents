@@ -4,7 +4,7 @@ This repo is a list of notes on creating Tailwind CSS components in React
 ## Adding Gradient to text
 First add the gradient to the tailwind.config.js
 
-```
+```jsx
  theme: {
     extend: {
       backgroundImage: {
@@ -25,7 +25,7 @@ Make the text transparent and clip the text.
 ```
 
 In a React component
-```js
+```jsx
 interface Props
 {
     text: string,
@@ -58,7 +58,7 @@ export default function GradiantText(props: Props) {
 
 ## Adding gradients to tailwind.config.js
 
-```
+```jsx
     extend: {
       backgroundImage: {
         'hero-gradient':

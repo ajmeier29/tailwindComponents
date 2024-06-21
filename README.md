@@ -1,6 +1,27 @@
 # tailwindComponents
 This repo is a list of notes on creating Tailwind CSS components in React 
 
+## Creating blur effect on bottom part of an image
+- Set top div to relative. 
+- Use the same image next to one another and then use `absolute bottom-0 left-0 z-20` to overlay it on top of the first image then bring it to the front
+- Use `h-[25%]` to only show the bottom 25% blurred
+- Use `object-bottom` to anchor the image to the bottom so its now overlayed correctly after the `h-[25%]` shifted it.  
+
+```html
+<div className="relative">
+    <img className='object-cover w-full justify-center rounded-lg' src={props.imgPath} />
+    <img className='absolute blur-sm object-cover h-[25%] object-bottom w-full justify-center rounded-lg bottom-0 left-0 z-20' src={props.imgPath} />
+    <div className="absolute bottom-4 ml-3 w-full z-30">
+        <h3 className="text-white font-bold">
+            {props.author}
+        </h3>
+        <h4 className="text-white font-bold">
+            {props.date}
+        </h4>
+    </div>
+</div>
+```
+
 ## Adding Gradient to text
 First add the gradient to the tailwind.config.js
 

@@ -114,26 +114,7 @@ Make the background color the gradient from the tailwind.css
 Make the text transparent and clip the text. 
 
 ```html
-<h2 className="bg-hero-gradient text-transparent bg-clip-text">Text</h2>
-```
-
-In a React component
-```jsx
-interface Props
-{
-    text: string,
-    gradient: string,
-    options?: string
-}
-// this component will display text using the gradiant
-// used in the props
-export default function GradiantText(props: Props) {
-    return (
-        <>
-            <h2 className={`bg-${props.gradient} text-transparent bg-clip-text ${props.options}`}>{props.text}</h2>
-        </>
-    )
-}
+<h2 className="bg-hero-gradient text-[45px] md:text-[55px] font-extrabold inline text-transparent bg-clip-text">Text</h2>
 ```
 
 ---

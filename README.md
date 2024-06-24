@@ -1,6 +1,13 @@
 # tailwindComponents
 This repo is a list of notes on creating Tailwind CSS components in React 
 
+## Text
+Instead of using a stroke, using a custom drop shadown is an option
+
+``` html
+<span className="mr-5 text-button-primary text-navbar-font-xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+```
+___
 ## Buttons
 
 ### Glowing Background Gradient Effects

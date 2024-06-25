@@ -1,6 +1,26 @@
 # tailwindComponents
 This repo is a list of notes on creating Tailwind CSS components in React 
 
+## Flex
+
+Centering thins on page
+
+```html
+<div className="min-h-screen flex items-center justify-center">
+  <div className="font-xl">
+      This should be centered on page
+  </div>
+<div>
+```
+___
+
+## Text
+Instead of using a stroke, using a custom drop shadown is an option
+
+``` html
+<span className="mr-5 text-button-primary text-navbar-font-xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+```
+___
 ## Buttons
 
 ### Glowing Background Gradient Effects

@@ -1,6 +1,36 @@
 # tailwindComponents
 This repo is a list of notes on creating Tailwind CSS components in React 
 
+## Typography
+
+I had issues with displaying rich text that was being parsed correctly using the Contentful API, and it was due to TailwindCSS conflictions. I fixed it by installing Tailwind-Typography and using `prose`
+
+Install it
+```
+npm install -D @tailwindcss/typography
+```
+
+Decode in contentful
+```js
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
+...
+
+var text = documentToHtmlString(entry.fields.content);
+
+```
+
+In react component
+
+```js
+<article className="prose">
+    {blogPostData?.content}
+</article>
+```
+
+Reference: https://github.com/tailwindlabs/tailwindcss-typography
+
+---
 ## Flex
 
 Centering thins on page
